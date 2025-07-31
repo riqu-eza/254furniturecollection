@@ -2,6 +2,7 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import { Providers } from '@/Store/Provider'
 import 'react-toastify/dist/ReactToastify.css';
+import { Analytics } from "@vercel/analytics/next";
 
 const poppin = Poppins({
   weight: ['100', '400'],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Providers>
           {children}
         </Providers>
+        <Analytics />
       </body>
 
     </html>
