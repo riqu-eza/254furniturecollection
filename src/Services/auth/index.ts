@@ -1,7 +1,7 @@
 
 export const register_me = async (formData : any) => {
 
-    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/register`;
+    const url = "/api/auth/register";
     console.log("Registering at URL =>", url); // ✅ Add this log
 
     try {
@@ -20,8 +20,8 @@ export const register_me = async (formData : any) => {
 }
 
 export const login_me = async (formData : any) => {
-    
-    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/register`;
+
+    const url = "/api/auth/login";
     console.log("Registering at URL =>", url); // ✅ Add this log
 
     try {
@@ -43,7 +43,7 @@ export const login_me = async (formData : any) => {
 
 export const forget_password = async (formData : any) => {
     
-    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/register`;
+    const url = "/api/auth/forgetPassword";
     console.log("Registering at URL =>", url); // ✅ Add this log
 
     try {
