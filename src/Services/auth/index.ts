@@ -1,8 +1,11 @@
 
 export const register_me = async (formData : any) => {
-    
+
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/register`;
+    console.log("Registering at URL =>", url); // ✅ Add this log
+
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/register`, {
+        const res = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -18,8 +21,11 @@ export const register_me = async (formData : any) => {
 
 export const login_me = async (formData : any) => {
     
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/register`;
+    console.log("Registering at URL =>", url); // ✅ Add this log
+
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/login`, {
+        const res = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,8 +42,12 @@ export const login_me = async (formData : any) => {
 
 
 export const forget_password = async (formData : any) => {
+    
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/register`;
+    console.log("Registering at URL =>", url); // ✅ Add this log
+
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/forgetPassword`, {
+        const res = await fetch( url , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
