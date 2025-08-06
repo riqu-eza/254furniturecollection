@@ -1,8 +1,6 @@
-
-export const register_me = async (formData : any) => {
-
+export const register_me = async (formData: any) => {
     const url = "/api/auth/register";
-    console.log("Registering at URL =>", url); // ✅ Add this log
+    console.log("Calling register API =>", url);
 
     try {
         const res = await fetch(url, {
@@ -11,18 +9,17 @@ export const register_me = async (formData : any) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
-        })
-        const data = res.json();
+        });
+        const data = await res.json();
         return data;
     } catch (error) {
-        console.log('error in register (service) => ', error);
+        console.log('Error in register (service) =>', error);
     }
-}
+};
 
-export const login_me = async (formData : any) => {
-
+export const login_me = async (formData: any) => {
     const url = "/api/auth/login";
-    console.log("Registering at URL =>", url); // ✅ Add this log
+    console.log("Calling login API =>", url);
 
     try {
         const res = await fetch(url, {
@@ -31,33 +28,29 @@ export const login_me = async (formData : any) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
-        })
-        const data = res.json();
+        });
+        const data = await res.json();
         return data;
     } catch (error) {
-        console.log('error in login (service) => ', error);
+        console.log('Error in login (service) =>', error);
     }
-}
+};
 
-
-
-export const forget_password = async (formData : any) => {
-    
+export const forget_password = async (formData: any) => {
     const url = "/api/auth/forgetPassword";
-    console.log("Registering at URL =>", url); // ✅ Add this log
+    console.log("Calling forget password API =>", url);
 
     try {
-        const res = await fetch( url , {
+        const res = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
-        })
-        const data = res.json();
+        });
+        const data = await res.json();
         return data;
     } catch (error) {
-        console.log('error in forget Password (service) => ', error);
+        console.log('Error in forgetPassword (service) =>', error);
     }
-}
-
+};
