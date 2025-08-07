@@ -1,12 +1,13 @@
 {
-  "name": "next_ecommerce_tx",
+  "name": "254furniturecollection",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
@@ -28,6 +29,7 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.1.0",
     "next": "^13.5.11",
+    "next-sitemap": "^4.2.3",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-data-table-component": "^7.5.3",

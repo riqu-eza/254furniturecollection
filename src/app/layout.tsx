@@ -1,34 +1,67 @@
-import './globals.css'
-import { Poppins } from 'next/font/google'
-import { Providers } from '@/Store/Provider'
-import 'react-toastify/dist/ReactToastify.css';
+import "./globals.css";
+import { Poppins } from "next/font/google";
+import { Providers } from "@/Store/Provider";
+import "react-toastify/dist/ReactToastify.css";
 import { Analytics } from "@vercel/analytics/next";
 
 const poppin = Poppins({
-  weight: ['100', '400'],
-  subsets: ['latin'],
-})
-
+  weight: ["100", "400"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
-  title: 'Ecommerce Next Demo app',
-  description: 'Powered by Dancah Technologies',
-}
+  title: "254 Furniture Collection - Affordable Furniture in Nairobi",
+  description:
+    "Shop quality, stylish, and affordable furniture in Nairobi with 254 Furniture Collection. Explore sofas, beds, dining sets, office desks, and custom-made designs delivered across Kenya.",
+  keywords: [
+    "furniture Nairobi",
+    "furniture Kenya",
+    "affordable furniture Nairobi",
+    "buy furniture online Kenya",
+    "Nairobi sofas",
+    "beds in Nairobi",
+    "office furniture Kenya",
+    "dining sets Nairobi",
+    "home furniture Kenya",
+    "custom furniture Nairobi",
+    "modern furniture Kenya",
+    "wooden furniture Nairobi",
+    "furniture shops Nairobi",
+    "furniture delivery Nairobi",
+    "living room sets Kenya",
+    "254 Furniture Collection"
+  ],
+  openGraph: {
+    title: "254 Furniture Collection - Online Furniture Store in Nairobi",
+    description:
+      "Experience comfort and style with 254 Furniture Collection. Shop quality sofas, beds, office furniture, and custom pieces online with delivery across Nairobi and Kenya.",
+    url: "https://www.254furniturecollection.co.ke/",
+    siteName: "254 Furniture Collection",
+    images: [
+      {
+        url: "/og-image.png", // Ensure this image exists in your /public folder
+        width: 1200,
+        height: 630,
+        alt: "Sofas, beds, and furniture from 254 Furniture Collection",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
-}) { 
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={poppin.className}>
-        <Providers>
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
         <Analytics />
       </body>
-
     </html>
-  )
+  );
 }
